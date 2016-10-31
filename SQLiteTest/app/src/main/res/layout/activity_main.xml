@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.luhui1hao.sqlitetest.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/id"
+                            style="@style/InfoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/id" />
+
+                        <TextView
+                            android:id="@+id/name"
+                            style="@style/InfoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/name" />
+
+                        <TextView
+                            android:id="@+id/url"
+                            style="@style/InfoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/url" />
+
+                        <TextView
+                            android:id="@+id/alexa"
+                            style="@style/InfoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/alexa" />
+
+                        <TextView
+                            android:id="@+id/country"
+                            style="@style/InfoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/country" />
+
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/initBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Init" />
+
+            <Button
+                android:id="@+id/insertBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delete" />
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/queryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="queryBtn" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

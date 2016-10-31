@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="name">
+        <item>Google</item>
+        <item>淘宝</item>
+        <item>菜鸟教程</item>
+        <item>微博</item>
+        <item>Facebook</item>
+    </array>
+    <array name="url">
+        <item>https://www.google.cm/</item>
+        <item>https://www.taobao.com/</item>
+        <item>http://www.runoob.com/</item>
+        <item>http://weibo.com/</item>
+        <item>https://www.facebook.com/</item>
+    </array>
+    <array name="alexa">
+        <item>1</item>
+        <item>13</item>
+        <item>4689</item>
+        <item>20</item>
+        <item>3</item>
+    </array>
+    <array name="country">
+        <item>USA</item>
+        <item>CN</item>
+        <item>CN</item>
+        <item>CN</item>
+        <item>USA</item>
+    </array>
+</resources>

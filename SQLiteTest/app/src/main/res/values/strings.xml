@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SQLiteTest</string>
+    <string name="id">id</string>
+    <string name="name">name</string>
+    <string name="url">url</string>
+    <string name="alexa">alexa</string>
+    <string name="country">country</string>
+</resources>
