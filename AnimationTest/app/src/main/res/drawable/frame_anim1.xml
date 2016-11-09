@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@mipmap/rcmd_jump_dot1"
+        android:duration="@integer/frame_anim1_duration"/>
+    <item android:drawable="@mipmap/rcmd_jump_dot2"
+        android:duration="@integer/frame_anim1_duration"/>
+    <item android:drawable="@mipmap/rcmd_jump_dot3"
+        android:duration="@integer/frame_anim1_duration"/>
+    <item android:drawable="@mipmap/rcmd_jump_dot4"
+        android:duration="@integer/frame_anim1_duration"/>
+</animation-list>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+    <!--pivot的应用还是不太清楚，虽然知道它是缩放中心点的意思-->
+    <scale
+        android:fromXScale="2.0"
+        android:fromYScale="2.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:duration="1000"/>
+</set>
