@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".TweenAnimationTest" />
         <activity android:name=".FrameAnimationTest" />
-        <activity android:name=".PropertyAnimationTest"/>
+        <activity android:name=".PropertyAnimationTest" />
+        <activity android:name=".HighLevelPropertyAnimationTest"></activity>
     </application>
 
 </manifest>

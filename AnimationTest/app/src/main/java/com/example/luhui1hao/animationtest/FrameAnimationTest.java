@@ -5,6 +5,10 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+/**
+ * 1.获取Drawable
+ * 2.调用start方法
+ */
 public class FrameAnimationTest extends Activity {
 
     private ImageView frameAnimImg, frameAnimImg2;

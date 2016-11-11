@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button tweenBtn, frameBtn, propertyBtn;
+    private Button tweenBtn, frameBtn, propertyBtn, highPropertyBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
         tweenBtn = (Button) findViewById(R.id.tween_anim_btn);
         frameBtn = (Button) findViewById(R.id.frame_anim_btn);
         propertyBtn = (Button) findViewById(R.id.property_anim_btn);
+        highPropertyBtn = (Button) findViewById(R.id.property_anim_high_btn);
 
         BtnListener listener = new BtnListener();
         tweenBtn.setOnClickListener(listener);
         frameBtn.setOnClickListener(listener);
         propertyBtn.setOnClickListener(listener);
+        highPropertyBtn.setOnClickListener(listener);
     }
 
     class BtnListener implements View.OnClickListener{
@@ -51,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 case R.id.property_anim_btn:{
                     Intent intent = new Intent(MainActivity.this, PropertyAnimationTest.class);
+                    startActivity(intent);
+                    break;
+                }
+                case R.id.property_anim_high_btn:{
+                    Intent intent = new Intent(MainActivity.this, HighLevelPropertyAnimationTest.class);
                     startActivity(intent);
                     break;
                 }

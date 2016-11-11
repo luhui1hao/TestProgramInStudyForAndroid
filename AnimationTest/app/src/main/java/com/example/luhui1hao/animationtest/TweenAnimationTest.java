@@ -16,6 +16,9 @@ import android.widget.ImageView;
  *TranslateAnimation：位移渐变效果，创建时指定起始以及结束位置，并指定动画的持续 时间即可；对应<translate/>标签！
  *RotateAnimation：旋转渐变效果，创建时指定动画起始以及结束的旋转角度，以及动画 持续时间和旋转的轴心；对应<rotate/>标签
  *AnimationSet：组合渐变，就是前面多种渐变的组合，对应<set/>标签
+ *
+ * 1.首先通过loadAnimation获取Animation对象
+ * 2.调用View的startAnimation开始播放动画
  */
 public class TweenAnimationTest extends Activity {
 
