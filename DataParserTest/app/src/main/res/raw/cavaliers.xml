@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons xmlns:luhui="com.example.luhui1hao">
+    <luhui:person id="1">
+        <luhui:name>LeBron James</luhui:name>
+        <luhui:age>31</luhui:age>
+        <luhui:number>23</luhui:number>
+        <luhui:position>Small Forward</luhui:position>
+    </luhui:person>
+    <luhui:person id="2">
+        <luhui:name>Kyrie Irving</luhui:name>
+        <luhui:age>24</luhui:age>
+        <luhui:number>2</luhui:number>
+        <luhui:position>Point Guard</luhui:position>
+    </luhui:person>
+    <luhui:person id="3">
+        <luhui:name>Kevin Love</luhui:name>
+        <luhui:age>27</luhui:age>
+        <luhui:number>0</luhui:number>
+        <luhui:position>Power Forward</luhui:position>
+    </luhui:person>
+    <luhui:person id="4">
+        <luhui:name>J.R.Smith</luhui:name>
+        <luhui:age>30</luhui:age>
+        <luhui:number>5</luhui:number>
+        <luhui:position>Shooting Guard</luhui:position>
+    </luhui:person>
+    <luhui:person id="5">
+        <luhui:name>Tristan Thompson</luhui:name>
+        <luhui:age>25</luhui:age>
+        <luhui:number>13</luhui:number>
+        <luhui:position>Center</luhui:position>
+    </luhui:person>
+</persons>

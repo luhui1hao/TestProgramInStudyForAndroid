@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/sax_parser_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAX解析"/>
+    <Button
+        android:id="@+id/pull_parser_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PULL解析"/>
+    <Button
+        android:id="@+id/pull_generate_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PULL生成XML"/>
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear"
+        android:textAllCaps="false"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="xml内容显示区"/>
+    </ScrollView>
+</LinearLayout>
