@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.luhui1hao.dataparsertest.bean.Person;
-import com.example.luhui1hao.dataparsertest.xmlpaser.pull.PullParserUtils;
-import com.example.luhui1hao.dataparsertest.xmlpaser.sax.SaxParserUtils;
+import com.example.luhui1hao.dataparsertest.xmlparser.pull.PullParserUtils;
+import com.example.luhui1hao.dataparsertest.xmlparser.sax.SaxParserUtils;
 
 import java.io.BufferedReader;
 import java.io.File;

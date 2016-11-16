@@ -1,4 +1,4 @@
-package com.example.luhui1hao.dataparsertest.xmlpaser.pull;
+package com.example.luhui1hao.dataparsertest.xmlparser.pull;
 
 
 import android.util.Xml;

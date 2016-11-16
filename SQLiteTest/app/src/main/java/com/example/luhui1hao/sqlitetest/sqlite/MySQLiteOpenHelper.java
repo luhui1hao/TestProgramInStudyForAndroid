@@ -10,13 +10,11 @@ import android.widget.Toast;
 
 import com.example.luhui1hao.sqlitetest.R;
 
-import java.util.Calendar;
-
 /**
  * Created by luhui on 2016/10/28.
  */
 
-public class MySQLiteOpenHelper extends SQLiteOpenHelper{
+public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
     public static final String CREATE_TABLE_WEBSITES = "CREATE TABLE Websites ("
             + "id integer primary key autoincrement, "
@@ -33,10 +31,18 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
         mContext = context;
     }
 
-    public static MySQLiteOpenHelper getInstance(Context context){
-        if(mySQLiteOpenHelper == null){
-            mySQLiteOpenHelper = new MySQLiteOpenHelper(context, "Test.db", null ,1);
-            return mySQLiteOpenHelper;
+    /**
+     * 单例模式，双重锁定
+     * @param context
+     * @return
+     */
+    public static MySQLiteOpenHelper getInstance(Context context) {
+        if (mySQLiteOpenHelper == null) {
+            synchronized (MySQLiteOpenHelper.class) {
+                if (mySQLiteOpenHelper == null) {
+                    mySQLiteOpenHelper = new MySQLiteOpenHelper(context, "Test.db", null, 1);
+                }
+            }
         }
 
         return mySQLiteOpenHelper;
@@ -56,16 +62,17 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
     /**
      * 清空数据库
      */
-    public int deleteAll(String tableName){
+    public int deleteAll(String tableName) {
         SQLiteDatabase database = mySQLiteOpenHelper.getWritableDatabase();
         return database.delete(tableName, null, null);
     }
 
     /**
      * 插入初始化Demo数据
+     *
      * @param tableName
      */
-    public void initData(String tableName){
+    public void initData(String tableName) {
         deleteAll(tableName);
 
         SQLiteDatabase database = mySQLiteOpenHelper.getWritableDatabase();
@@ -77,9 +84,9 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
         String[] country = resources.getStringArray(R.array.country);
 
         ContentValues values = new ContentValues();
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             values.put("id", i);
-            values.put("name",name[i]);
+            values.put("name", name[i]);
             values.put("url", url[i]);
             values.put("alexa", alexa[i]);
             values.put("country", country[i]);
@@ -91,14 +98,14 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
         }
     }
 
-    public void insertData(){
+    public void insertData() {
         SQLiteDatabase database = mySQLiteOpenHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("alexa", System.currentTimeMillis());
         database.insert("Websites", null, values);
     }
 
-    public void deleteData(){
+    public void deleteData() {
         SQLiteDatabase database = mySQLiteOpenHelper.getWritableDatabase();
         database.delete("Websites", "country = ?", new String[]{"CN"});
     }
@@ -106,7 +113,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
     /**
      * 修改country=CN的alexa
      */
-    public void updateData(){
+    public void updateData() {
         SQLiteDatabase database = mySQLiteOpenHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 //        values.put("name", "name");
@@ -118,23 +125,25 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
 
     /**
      * 使用SQL语句来删除表的内容
+     *
      * @param tableName
      */
-    public void deleteAll2(String tableName){
+    public void deleteAll2(String tableName) {
         String cmd = "DELETE FROM " + tableName;
         SQLiteDatabase database = mySQLiteOpenHelper.getWritableDatabase();
         database.execSQL(cmd);
     }
 
     /**
-     *使用SQL语句进行数据插入
+     * 使用SQL语句进行数据插入
+     *
      * @param tableName
      * @param name
      * @param url
      * @param alexa
      * @param country
      */
-    public void insertData2(String tableName, String name, String url, int alexa, String country){
+    public void insertData2(String tableName, String name, String url, int alexa, String country) {
         String cmd = "INSERT INTO " + tableName + "(name, url, alexa, country)" + " VALUES ('"
                 + name + "', '"
                 + url + "', "
