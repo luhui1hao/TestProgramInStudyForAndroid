@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/org_json_parser_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android自带解析"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/org_json_generate_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android自带生成"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/gson_parser_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GSON解析"/>
+    <Button
+        android:id="@+id/gson_generate_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GSON生成JSON"/>
+    <Button
+        android:id="@+id/clear_json_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear"
+        android:textAllCaps="false"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/content_json_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="json内容显示区"/>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "age": 31,
+    "number": 23,
+    "position": "Small Forward"
+  },
+  {
+    "id": 2,
+    "name": "Kyrie Irving",
+    "age": 24,
+    "number": 2,
+    "position": "Point Guard"
+  },
+  {
+    "id": 3,
+    "name": "Kevin Love",
+    "age": 27,
+    "number": 0,
+    "position": "Power Forward"
+  },
+  {
+    "id": 4,
+    "name": "J.R.Smith",
+    "age": 30,
+    "number": 5,
+    "position": "Shooting Guard"
+  },
+  {
+    "id": 5,
+    "name": "Tristan Thompson",
+    "age": 25,
+    "number": 13,
+    "position": "Center"
+  }
+]

@@ -6,34 +6,15 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/sax_parser_btn"
+        android:id="@+id/xml_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SAX解析"/>
-    <Button
-        android:id="@+id/pull_parser_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PULL解析"/>
-    <Button
-        android:id="@+id/pull_generate_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PULL生成XML"/>
-    <Button
-        android:id="@+id/clear_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="clear"
-        android:textAllCaps="false"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:text="XML解析与生成" />
 
-        <TextView
-            android:id="@+id/content_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="xml内容显示区"/>
-    </ScrollView>
+    <Button
+        android:id="@+id/json_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JSON解析与生成" />
+
 </LinearLayout>
