@@ -1,4 +1,4 @@
-﻿package com.example.luhui1hao.dataparsertest.jsonparser.gson;
+package com.example.luhui1hao.dataparsertest.jsonparser.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -8,9 +8,13 @@ import com.google.gson.JsonParser;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Created by luhui on 2017/1/24.
+ */
+
 public class GsonUtil {
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public static ArrayList JsonArray2JavaList(String result,Class tClass){
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    public static ArrayList JsonArray2JavaList(String result,Class tClass){
         Gson gson = new Gson();
         //创建知识库对象的ArrayList
         ArrayList list = new ArrayList();
@@ -30,25 +34,25 @@ public class GsonUtil {
             //存在则获取该元素
             JsonElement e = (JsonElement) it.next();
             //将该元素从JSON转换成bean对象
-			Object oValue = gson.fromJson(e,tClass);
+            Object oValue = gson.fromJson(e,tClass);
             //将该bean对象塞到ArrayList里面去
             list.add(oValue);
         }
         return list;
     }
-	
-	public static String Java2Json(Object obj){
+
+    public static String Java2Json(Object obj){
         Gson gson = new Gson();
         String result = gson.toJson(obj);
         return result;
     }
-	@SuppressWarnings({ "rawtypes" })
+    @SuppressWarnings({ "rawtypes" })
     public static String JavaList2Json(ArrayList list){
         Gson gson = new Gson();
         String result = gson.toJson(list);
         return result;
     }
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public static Object Json2Java(String result, Class tClass){
         Gson gson = new Gson();
         return gson.fromJson(result,tClass);
