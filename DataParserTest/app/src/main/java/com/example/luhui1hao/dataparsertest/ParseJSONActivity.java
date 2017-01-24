@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class ParseJSONActivity extends AppCompatActivity {
 
-    private Button orgParseBtn, orgGenerateBtn, clearBtn;
+    private Button orgParseBtn, orgGenerateBtn, clearBtn, gsonParseBtn;
     private TextView tv;
 
     @Override
@@ -35,11 +35,14 @@ public class ParseJSONActivity extends AppCompatActivity {
         orgParseBtn = (Button) findViewById(R.id.org_json_parser_btn);
         clearBtn = (Button) findViewById(R.id.clear_json_btn);
         orgGenerateBtn = (Button) findViewById(R.id.org_json_generate_btn);
+        gsonParseBtn = (Button) findViewById(R.id.gson_parser_btn);
 
         BtnListener listener = new BtnListener();
         orgParseBtn.setOnClickListener(listener);
         clearBtn.setOnClickListener(listener);
         orgGenerateBtn.setOnClickListener(listener);
+        gsonParseBtn.setOnClickListener(listener);
+
     }
 
     class BtnListener implements View.OnClickListener {
@@ -63,6 +66,8 @@ public class ParseJSONActivity extends AppCompatActivity {
                 tv.append(temp);
             } else if(id == R.id.clear_json_btn){
                 tv.setText("");
+            } else if (id == R.id.gson_parser_btn){
+
             }
         }
     }
