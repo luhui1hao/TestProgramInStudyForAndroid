@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- image的id -->
+    <array name="image_id_arr">
+        <item>@drawable/girl1</item>
+        <item>@drawable/girl2</item>
+        <item>@drawable/girl3</item>
+        <item>@drawable/girl4</item>
+        <item>@drawable/girl5</item>
+    </array>
+</resources>
