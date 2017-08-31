@@ -76,7 +76,7 @@ public class LoopViewPagerActivity extends AppCompatActivity {
 //        }
         //ViewPager和Adapter的初始化
         viewPager = (LoopViewPager) findViewById(R.id.loopviewpager);
-        pagerAdapter = new MyLoopViewPagerAdapter(imgIdArr);
+        pagerAdapter = new MyLoopViewPagerAdapter(this, imgIdArr);
         viewPager.setAdapter(pagerAdapter);
         //添加翻页动画
         viewPager.setPageTransformer(true, new DepthPageTransformer());

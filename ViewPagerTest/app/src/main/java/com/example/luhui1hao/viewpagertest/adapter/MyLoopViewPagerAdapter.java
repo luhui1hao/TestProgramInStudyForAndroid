@@ -1,10 +1,14 @@
 package com.example.luhui1hao.viewpagertest.adapter;
 
+import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.luhui1hao.viewpagertest.R;
 
 /**
  * Created by luhui on 2017/1/25.
@@ -13,10 +17,12 @@ import android.widget.ImageView;
 public class MyLoopViewPagerAdapter extends PagerAdapter {
     private int[] imgIdArr;
     private int mSize;
+    private Context mContext;
 
-    public MyLoopViewPagerAdapter(int[] imgIdArr){
+    public MyLoopViewPagerAdapter(Context mContext, int[] imgIdArr){
         this.mSize = imgIdArr.length;
         this.imgIdArr = imgIdArr;
+        this.mContext = mContext;
     }
 
     @Override
@@ -32,15 +38,15 @@ public class MyLoopViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         Log.d("luhui", position+"");
-        ImageView iv = new ImageView(container.getContext());
+        View view = LayoutInflater.from(mContext).inflate(R.layout.loopviewpager_item_layout, container, false);
+        ImageView iv = (ImageView) view.findViewById(R.id.img);
         iv.setImageResource(imgIdArr[position]);
-        iv.setScaleType(ImageView.ScaleType.CENTER_CROP);//按比例缩放，使得内容充满容器
-        container.addView(iv);
-        return iv;
+        container.addView(view);
+        return view;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((ImageView)object);
+        container.removeView((View)object);
     }
 }
